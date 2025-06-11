@@ -1,0 +1,32 @@
+package dco.domain.question.dto;
+
+import dco.domain.question.entity.Category;
+import dco.domain.question.entity.Question;
+import lombok.*;
+
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class CreateQuestionResponse {
+
+    private Long questionId;
+    private String title;
+    private String content;
+    private String name;
+    private Category category;
+    private String code;
+    private boolean secret;
+
+    public static CreateQuestionResponse toDto(Question question){
+        return CreateQuestionResponse.builder()
+                .questionId(question.getQuestionId())
+                .title(question.getTitle())
+                .content(question.getContent())
+                .name(question.getMember().getName())
+                .category(question.getCategory())
+                .code(question.getCode())
+                .secret(question.isSecret())
+                .build();
+    }
+}

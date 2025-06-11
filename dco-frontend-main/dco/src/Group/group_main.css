@@ -1,0 +1,150 @@
+.group-container {
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  width: 1280px;
+  display: flex;
+  flex-direction: column;
+  height: auto; /* 화면 높이에 맞게 자동으로 조절 */
+}
+
+.group-image-container {
+  width: 100%;
+  min-height: 150px;
+  height: clamp(
+    75px,
+    20vh,
+    225px
+  ); /* 최소 75px, 최대 225px, 중간은 뷰포트 높이에 비례 */
+  overflow: hidden;
+  filter: blur(2px);
+  position: relative; /* 중앙 정렬을 위해 relative 설정 */
+}
+
+.group-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.group-header {
+  display: flex;
+  justify-content: space-between; /* 좌우로 요소 배치 */
+  align-items: center; /* 수직 중앙 정렬 */
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.group-info {
+  display: flex;
+  align-items: baseline;
+}
+
+.group-name {
+  font-size: 36px;
+  color: #343a40;
+  margin: 0;
+}
+
+.group-year-semester {
+  font-size: 18px;
+  color: #626568;
+  margin-left: 10px; /* 그룹 이름과의 간격 */
+}
+
+.group-leader {
+  font-size: 18px;
+  color: #626568;
+}
+
+.group-tabs {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+  background-color: #e9ecef;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.group-tab {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #191919;
+  border: 1px solid transparent;
+  border-bottom: none;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.group-tab:hover {
+  font-weight: bold;
+}
+
+.group-tab.active {
+  font-weight: bold;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-bottom: 2px solid #191919;
+  color: #191919;
+}
+
+.loading,
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto; /* 화면 높이에 맞게 자동으로 조절 */
+  font-size: 24px;
+  color: black;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .group-container {
+    max-width: auto;
+    padding: 10px;
+  }
+
+  .group-image-container {
+    width: 100%;
+    height: clamp(75px, 20vh, 225px);
+  }
+
+  .group-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .group-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .group-name {
+    font-size: 28px;
+  }
+
+  .group-year-semester {
+    font-size: 16px;
+    margin-left: 0;
+  }
+
+  .group-leader {
+    font-size: 16px;
+    margin-top: 5px;
+  }
+
+  .group-tabs {
+    flex-wrap: wrap;
+  }
+
+  .group-tab {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .loading,
+  .error {
+    font-size: 18px;
+    padding: 20px;
+  }
+}

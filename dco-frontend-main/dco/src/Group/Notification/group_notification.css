@@ -1,0 +1,83 @@
+/* 공지 사항 리스트 스타일 */
+
+.notification-list-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 20px;
+}
+
+.notification-list-actions {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.notification-write-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff; /* 부트스트랩 기본 색상 */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.notification-write-button:hover {
+  background-color: #0056b3;
+}
+
+.notification-list {
+  margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.notification-list-header,
+.list-item {
+  display: grid;
+  grid-template-columns: 6fr 2fr 2fr;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+.notification-list-header {
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #dee2e6;
+  font-weight: bold;
+  color: #343a40;
+}
+
+.list-item {
+  border-bottom: 1px solid #dee2e6;
+  transition: background-color 0.2s;
+}
+
+.list-item:hover {
+  background-color: #f1f3f5;
+}
+
+.list-item-link {
+  display: contents;
+  text-decoration: none;
+  color: inherit;
+}
+
+.list-item-title {
+  padding-left: 10px;
+}
+
+.notification-list-date,
+.notification-list-author {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .notification-list-header,
+  .list-item {
+    grid-template-columns: 4fr 2fr;
+  }
+
+  .notification-list-author {
+    display: none;
+  }
+}

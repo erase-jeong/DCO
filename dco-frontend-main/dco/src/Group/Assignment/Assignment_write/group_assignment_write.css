@@ -1,0 +1,100 @@
+/* 기존 스타일 유지 */
+.assignment-write-container {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.assignment-write-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.assignment-write-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.assignment-write-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.assignment-write-submit {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: black;
+  background-color: #eee;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.assignment-write-submit:hover {
+  background-color: #ccc;
+}
+
+/* 추가된 스타일 */
+.testcase-list {
+  margin-top: 20px;
+}
+
+.testcase-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.testcase-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.testcase-input,
+.testcase-output {
+  width: 45%;
+  height: 80px;
+  padding: 10px;
+  margin-right: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.testcase-remove-button {
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  color: black;
+  background-color: #eee;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.testcase-add-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  font-size: 18px;
+  color: black;
+  background-color: #eee;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.testcase-remove-button:hover,
+.testcase-add-button:hover {
+  background-color: #ccc;
+}

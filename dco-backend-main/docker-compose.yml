@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  springboot:
+    env_file:
+      - .env
+    image: astar5327/dco:latest
+    container_name: springboot
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: ${DB_URL}
+      SPRING_DATASOURCE_USERNAME: ${DB_USERNAME}
+      SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - dco-network
+
+  postgres:
+    image: postgres
+    container_name: postgres
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/src/main/java/dco/global/config/postgresql/data
+    networks:
+      - dco-network
+
+  redis:
+    image: redis
+    container_name: redis
+    ports:
+      - "6379:6379"
+    networks:
+      - dco-network
+
+volumes:
+  db_data:
+
+networks:
+  dco-network:
+    driver: bridge

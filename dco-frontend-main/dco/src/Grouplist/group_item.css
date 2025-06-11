@@ -1,0 +1,70 @@
+/* 그룹 아이템 컨테이너 */
+.group-item-container {
+  margin: 20px;
+  width: 200px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 호버 효과 */
+.group-item-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 그룹 이미지 컨테이너 */
+.group-img-container {
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 비율 유지 */
+  background-color: #e0e0e0;
+  background-size: cover;
+  background-position: center;
+}
+
+/* 그룹 상세 정보 컨테이너 */
+.group-detail-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* 그룹 이름 스타일 */
+.GroupName {
+  color: #333333;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* 학기 및 교수 스타일 */
+.semester,
+.professor {
+  color: #777777;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .group-item-container {
+    max-width: 100%;
+    margin: 10px;
+  }
+
+  .GroupName {
+    font-size: 1.3rem;
+  }
+
+  .semester,
+  .professor {
+    font-size: 0.9rem;
+  }
+}

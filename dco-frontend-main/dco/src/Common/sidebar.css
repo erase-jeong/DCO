@@ -1,0 +1,91 @@
+/* sidebar.css */
+
+.sidebar {
+  width: 250px;
+  background-color: #eee;
+  height: 100vh;
+  padding-top: 20px;
+  /* color: #ecf0f1; */
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+}
+
+.sidebar-header {
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.user-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.sidebar-menu {
+  list-style-type: none;
+  padding: 0;
+  flex: 1; /* 메뉴가 전체 높이를 차지하도록 설정 */
+}
+
+.sidebar-menu li {
+  margin-bottom: 10px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  color: #191919;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar-link:hover {
+  background-color: #191919; /* 호버 시 어두운 색상 */
+  color: #ffffff;
+}
+
+.sidebar-icon {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+/* 버튼 스타일링 */
+.sidebar-link button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .user-name {
+    font-size: 16px;
+  }
+
+  .sidebar-icon {
+    font-size: 20px;
+  }
+
+  .sidebar-link {
+    padding: 10px 15px;
+  }
+}

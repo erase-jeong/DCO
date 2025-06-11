@@ -1,0 +1,19 @@
+.list-item {
+  display: grid;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+.list-item:hover {
+  background-color: #f1f3f5;
+}
+
+.list-item-link {
+  display: contents;
+  text-decoration: none;
+  color: inherit;
+}
+
+.list-item-title {
+  padding-left: 10px;
+}

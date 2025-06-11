@@ -1,0 +1,96 @@
+.assignment-list-container {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.assignment-list-actions {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.assignment-write-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff; /* 버튼 색상 수정 */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.assignment-write-button:hover {
+  background-color: #0056b3;
+}
+
+.assignment-list {
+  margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.assignment-list-header,
+.list-item {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr 1fr 1fr; /* 각 열의 비율에 따라 조정 */
+  align-items: center;
+  padding: 10px 15px;
+}
+
+.assignment-list-header {
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #dee2e6;
+  font-weight: bold;
+  color: #343a40;
+}
+
+.list-item {
+  border-bottom: 1px solid #dee2e6;
+  transition: background-color 0.2s;
+}
+
+.list-item:hover {
+  background-color: #f1f3f5;
+}
+
+.list-item-link {
+  display: contents;
+  text-decoration: none;
+  color: inherit;
+}
+
+.list-item-title {
+  padding-left: 10px;
+}
+
+.assignment-list-start-date,
+.assignment-list-end-date,
+.assignment-list-score,
+.assignment-list-status {
+  text-align: center;
+}
+
+/* 상태에 따른 색상 */
+.status-pending {
+  color: red;
+}
+
+.status-submitted {
+  color: green;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .assignment-list-header,
+  .list-item {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .assignment-list-start-date,
+  .assignment-list-end-date,
+  .assignment-list-score,
+  .assignment-list-status {
+    display: none;
+  }
+}
